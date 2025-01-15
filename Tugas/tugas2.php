@@ -10,5 +10,13 @@ Contoh :
 -->
 
 <?php
-  //
+  $arrays = [100,90,80,75,74,59,30,0.5];  
+  foreach ($arrays as $array){
+     if ($array >74){
+        echo "Alamak Kamu lulus ygy, Nilai mu adalah $array<br>";
+     } else{
+        echo "Astaga naga demi kobo, Kamu gak lulus, Nilaimu adalah $array<br>";
+     }
+  }
+  
 ?>

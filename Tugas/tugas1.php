@@ -10,5 +10,12 @@
 -->
 
 <?php
-  //
+  for ($Gry=1; $Gry <=20; $Gry++){
+
+    if ($Gry % 2 == 0){
+        echo $Gry . "Genap <br>";
+    } else {
+        echo $Gry . "Ganjil<br>";
+    }
+}
 ?>

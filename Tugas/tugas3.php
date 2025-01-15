@@ -8,5 +8,11 @@ contoh :
 -->
 
 <?php
-  //
+  $Prima = 10;
+  $hasil = true;
+  for ($p=2;$p<$Prima;$p++)
+  if ($Prima % $p == 0)
+  $hasil= false;
+  echo  "$Prima<br>";
+  echo $hasil ? "Ini Prima ya" : "Ini Bukan Prima ya";
 ?>
