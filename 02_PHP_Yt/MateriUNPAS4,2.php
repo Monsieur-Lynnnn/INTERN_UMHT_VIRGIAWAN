@@ -1,6 +1,6 @@
 <?php
-$mahasigma = ["Fadhil","0123849","Teknik Perpaduan Kecap", "Email"]
-
+$mahasigma =[ ["Fadhil","0123849","Teknik Perpaduan Kecap", "Email"]
+];
 
 ?>
 <!DOCTYPE html>
@@ -15,9 +15,10 @@ $mahasigma = ["Fadhil","0123849","Teknik Perpaduan Kecap", "Email"]
 
 <ul> 
 <?php foreach ($mahasigma as $mahabarata) : ?>
-    <li><?php echo $mhs[0;] ?></li>
-    <li><?php echo $mhs[1;] ?></li>
-    <li><?php echo $mhs[2;] ?></li>
+    <li><?php echo $mahabarata[0]; ?></li>
+    <li><?php echo $mahabarata[1]; ?></li>
+    <li><?php echo $mahabarata[2]; ?></li>
+    <li><?php echo $mahabarata[3]; ?></li>
     <?php endforeach; ?>
 
 <ul>
