@@ -1,5 +1,6 @@
 <?php
-$mahasigma =[ ["Fadhil","0123849","Teknik Perpaduan Kecap", "Email"]
+$mahasigma =[ ["Fadhil","0123849","Teknik Perpaduan Kecap", "Fdhilt"],
+["Rapael","087364","Teknik Kecap kecup","Raffaelireng0606"]
 ];
 
 ?>
