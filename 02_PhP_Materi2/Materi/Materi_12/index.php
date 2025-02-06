@@ -1,11 +1,7 @@
 <?php
-
 require 'functions.php';
-
 $Kendaraan = query("SELECT * FROM deskripsi");
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,12 +30,12 @@ $Kendaraan = query("SELECT * FROM deskripsi");
      <tr>
      <td> <?= $inc++ ?></td> 
      <td><a href="">Edit</a>
-     <a href="">Delete</a></td>
+     <a href="Delete.php?id=<?= $Tankista["id"];?>">Delete</a></td>
      <td><?= $Tankista["Varian"];?></td>
      <td><?= $Tankista["Persenjataan"];?></td>
      <td><?= $Tankista["Amunisi"];?></td>
      <td><?= $Tankista["Faksi"];?></td>
-     <td><img src="img/<?= $Tankista["Gambar"] ?>"width=75></td>
+     <td><img src="img/<?= $Tankista["Gambar"]; ?>"width=75></td>
     </tr>
     
     
