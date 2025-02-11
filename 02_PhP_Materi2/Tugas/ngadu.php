@@ -10,13 +10,13 @@ if ( isset ($_POST["Submit"] ) ) {
         echo "
                <script>
                 alert('Data berhasil Diinput') 
-                document.location.href = 'index.php'
+                document.location.href = 'aduindex.php'
                </script>";
     } else {
         echo "
         <script>
         alert('Data tidak berhasil diinput')
-        document.location.href = 'index.php'
+        document.location.href = 'aduindex.php'
         </script>";
     }
 

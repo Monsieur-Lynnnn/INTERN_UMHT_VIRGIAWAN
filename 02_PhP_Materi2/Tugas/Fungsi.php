@@ -49,12 +49,12 @@ function upload() {
     $temp = $_FILES['Gambar']['tmp_name'];
 
     if ($error === 4) {
-        echo "<script>alert('Pilih gambar terlebih dahulu!');</script>";
+        echo "<script>alert('Pilih File terlebih dahulu!');</script>";
         return false;
     }
 
    
-    $extension = ['jpg', 'jpeg', 'webp', 'png'];
+    $extension = ['jpg', 'jpeg', 'webp', 'png', 'docx', 'pdf'];
     $fileExt = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 
     if (!in_array($fileExt, $extension)) {
@@ -64,7 +64,7 @@ function upload() {
 
     
     if ($size > 100000000) {
-        echo "<script>alert('Ukuran gambar terlalu besar! Maksimal 1MB.');</script>";
+        echo "<script>alert('Ukuran File terlalu besar! Maksimal 2MB.');</script>";
         return false;
     }
 
@@ -76,7 +76,7 @@ function upload() {
     if (move_uploaded_file($temp, $Arah)) {
         return $filebaru; 
     } else {
-        echo "<script>alert('Gagal mengupload gambar!');</script>";
+        echo "<script>alert('Gagal mengupload file!');</script>";
         return false;
     }
 }
