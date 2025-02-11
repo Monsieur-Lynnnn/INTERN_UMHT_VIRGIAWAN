@@ -63,7 +63,7 @@ function upload() {
     }
 
     
-    if ($size > 1000000) {
+    if ($size > 100000000) {
         echo "<script>alert('Ukuran gambar terlalu besar! Maksimal 1MB.');</script>";
         return false;
     }
