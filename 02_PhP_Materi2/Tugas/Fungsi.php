@@ -18,10 +18,10 @@ function tambah($data) {
     $Amunisi = htmlspecialchars($data["Amunisi"]);
     $Faksi = htmlspecialchars($data["Faksi"]);
 
-    // Jalankan fungsi upload untuk mendapatkan nama file gambar
+    
     $Gambar = upload();
     if (!$Gambar) {
-        return false; // Jika gagal upload, hentikan proses
+        return false;
     }
 
     $kueri = "INSERT INTO deskripsi 
