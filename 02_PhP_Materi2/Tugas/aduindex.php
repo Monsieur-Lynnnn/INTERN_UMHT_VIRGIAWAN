@@ -22,7 +22,7 @@ $Kendaraan = query("SELECT * FROM deskripsi");
         <td>Pelaku</td>
         <td>Alasan pengaduan</td>
         <td>Tanggal</td>
-        <td>File Pengaduan</td>
+        <td>TKP</td>
     </tr>
 
     <?php $inc=1; ?>
