@@ -2,7 +2,7 @@
 require 'functions.php'; 
 $id = $_GET["id"];
  
-if ( haous($id) > 0 ) {
+if( hapus($id) > 0 ) {
     echo "
     <script>
     alert('data berhasil dihapus');
@@ -11,11 +11,11 @@ if ( haous($id) > 0 ) {
     ";
 }  else {
     echo "
-     <script>
+    <script>
     alert('data gagal dihapus');
     document.location.href = 'index.php'
     </script>
     ";
 }
-var_dump(haous($id));
+// var_dump(hapus("id"))
 ?>

@@ -29,8 +29,10 @@ $Kendaraan = query("SELECT * FROM deskripsi");
     <?php  foreach ($Kendaraan as $Tankista) : ?>
      <tr>
      <td> <?= $inc++ ?></td> 
-     <td><a href="">Edit</a>
-     <a href="Delete.php?id=<?= $Tankista["id"];?>">Delete</a></td>
+     <td>
+        <a href="ubah.php?id=<?= $Tankista["id"];?>">Edit</a>
+        <a href="Delete.php?id=<?= $Tankista["id"];?>" onclick="return confirm('Yakin?');">Delete</a>
+    </td>
      <td><?= $Tankista["Varian"];?></td>
      <td><?= $Tankista["Persenjataan"];?></td>
      <td><?= $Tankista["Amunisi"];?></td>

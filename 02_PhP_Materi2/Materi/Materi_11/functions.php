@@ -38,9 +38,5 @@ function tambah ($data) {
   return mysqli_affected_rows($database);
 }
 
-function hapus ($id) {
-    global $database;
-    mysqli_query ($database, "DELETE FROM deskripsi, WHERE id = $id");
-    return mysqli_affected_rows ($database);
-}
+
 ?>

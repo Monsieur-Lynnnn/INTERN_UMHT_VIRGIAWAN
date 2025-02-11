@@ -1,7 +1,7 @@
 <?php 
 
 
-require 'functions.php';
+require 'Fungsi.php';
 
 
 if ( isset ($_POST["Submit"] ) ) {
@@ -36,23 +36,23 @@ if ( isset ($_POST["Submit"] ) ) {
         <ul>
             
             <li>
-                <label for="Varian">Varian:</label>
+                <label for="Varian">korban:</label>
                 <input type="text" name="Varian" id="Varian">
             </li>
             <li>
-            <label for="Persenjataan">Persenjataan:</label>
+            <label for="Persenjataan">Pelaku:</label>
             <input type="text" name="Persenjataan" id="Persenjataan">
             </li>
             <li>
-            <label for="Amunisi">Tipe Amunisi:</label>
+            <label for="Amunisi">alasan:</label>
             <input type="text" name="Amunisi" id="Amunisi">
             </li>
             <li>
-            <label for="Faksi">Faksi:</label>
+            <label for="Faksi">tanggal:</label>
             <input type="text" name="Faksi" id="Faksi">
             </li>
             <li>
-            <label for="Gambar">Gambar:</label>
+            <label for="Gambar">foto ktp:</label>
             <input type="file" name="Gambar" id="Gambar">
             </li>
             <li>

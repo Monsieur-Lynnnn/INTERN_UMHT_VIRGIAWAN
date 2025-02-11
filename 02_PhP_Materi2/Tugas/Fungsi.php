@@ -48,13 +48,12 @@ function upload() {
     $error = $_FILES['Gambar']['error'];
     $temp = $_FILES['Gambar']['tmp_name'];
 
-    // Cek apakah ada file yang diupload
     if ($error === 4) {
         echo "<script>alert('Pilih gambar terlebih dahulu!');</script>";
         return false;
     }
 
-    // Validasi ekstensi file
+   
     $extension = ['jpg', 'jpeg', 'webp', 'png'];
     $fileExt = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 
@@ -63,19 +62,19 @@ function upload() {
         return false;
     }
 
-    // Batasan ukuran gambar (maksimal 1MB)
+    
     if ($size > 1000000) {
         echo "<script>alert('Ukuran gambar terlalu besar! Maksimal 1MB.');</script>";
         return false;
     }
 
-    // Buat nama unik untuk gambar agar tidak tertimpa
-    $newFileName = uniqid() . "." . $fileExt;
-    $targetPath = __DIR__ . '/img/' . $newFileName;
+    
+    $filebaru = uniqid() . "." . $fileExt;
+    $Arah = __DIR__ . '/Gambar/' . $filebaru;
 
     
-    if (move_uploaded_file($temp, $targetPath)) {
-        return $newFileName; 
+    if (move_uploaded_file($temp, $Arah)) {
+        return $filebaru; 
     } else {
         echo "<script>alert('Gagal mengupload gambar!');</script>";
         return false;
