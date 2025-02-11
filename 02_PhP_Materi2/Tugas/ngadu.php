@@ -49,14 +49,14 @@ if ( isset ($_POST["Submit"] ) ) {
             </li>
             <li>
             <label for="Faksi">tanggal:</label>
-            <input type="text" name="Faksi" id="Faksi">
+            <input type="Date" name="Faksi" id="Faksi">
             </li>
             <li>
             <label for="Gambar">foto ktp:</label>
             <input type="file" name="Gambar" id="Gambar">
             </li>
             <li>
-                <button type= "Submit" name="Submit">Tambahkan Kendaraan!</button>
+                <button type= "Submit" name="Submit">Tambahkan Aduan!</button>
             </li>
         </ul>
     
