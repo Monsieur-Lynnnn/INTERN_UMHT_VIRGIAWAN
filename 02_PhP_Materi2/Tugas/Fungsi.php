@@ -71,7 +71,7 @@ function upload() {
     
     $filebaru = uniqid() . "." . $fileExt;
     $Arah = __DIR__ . '/Gambar/' . $filebaru;
-
+ 
     
     if (move_uploaded_file($temp, $Arah)) {
         return $filebaru; 
