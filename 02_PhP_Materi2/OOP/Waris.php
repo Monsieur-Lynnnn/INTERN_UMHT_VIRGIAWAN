@@ -1,32 +1,38 @@
 <?php
 class Produk {
-    public $judul, $penulis, $penerbit, $harga, $jmlhalaman, $waktumain, $tipe;
+    public $judul, $penulis, $penerbit, $harga, $jmlhalaman, $waktumain;
 
     public function __construct($judul = "judul", $penulis = "penulis", 
-        $penerbit = "penerbit", $harga = 0, $jmlhalaman = 0, $waktumain = 0, $tipe = "tipe") {
+        $penerbit = "penerbit", $harga = 0, $jmlhalaman = 0, $waktumain = 0) {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
         $this->harga = $harga;
         $this->jmlhalaman = $jmlhalaman;
         $this->waktumain = $waktumain;
-        $this->tipe = $tipe;
     }
 
     public function getLabel() {
         return "$this->penulis, $this->penerbit";
     }
 
-    public function getIngfoLengkap() {
-        $str = "{$this->tipe} : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
-
-        if ($this->tipe == "Komik") {
-            $str .= " - {$this->jmlhalaman} Halaman.";
-        } elseif ($this->tipe == "Game") {
-            $str .= " - {$this->waktumain} Jam.";
-        }
-
+    public function getIngfoProduk() {
+        $str = "{$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
         return $str;
+    }
+}
+
+class Komik extends Produk {
+    public function getIngfoProduk() {
+        $str = "Komik : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->jmlhalaman} Halaman.";
+        return $str; 
+    }
+}
+
+class Game extends Produk {
+    public function getIngfoProduk() {
+        $str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ~ {$this->waktumain} Jam.";
+        return $str; 
     }
 }
 
@@ -37,10 +43,11 @@ class CetakIngfoProduk {
     }
 }
 
-// Membuat objek dengan tipe yang benar
-$produk3 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0, "Komik");
-$produk4 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 45000, 0, 50, "Game");
 
-echo $produk3->getIngfoLengkap();
+$produk3 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0);
+$produk4 = new Game("Uncharted", "Neil Druckmann", "Sony Computer", 45000, 0, 50);
+
+
+echo $produk3->getIngfoProduk();
 echo "<br>";
-echo $produk4->getIngfoLengkap();
+echo $produk4->getIngfoProduk();
