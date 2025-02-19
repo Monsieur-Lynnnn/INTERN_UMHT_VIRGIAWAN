@@ -118,3 +118,4 @@ $cetakProduk = new CetakIngfoProduk();
 $cetakProduk->tambahProduk($produk3);
 $cetakProduk->tambahProduk($produk4);
 echo $cetakProduk->cetak();
+\
