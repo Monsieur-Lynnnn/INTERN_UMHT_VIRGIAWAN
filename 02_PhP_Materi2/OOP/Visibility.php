@@ -1,15 +1,25 @@
 <?php
 class Produk {
-    public $judul, $penulis, $penerbit, $harga;
-
+    public $judul, $penulis, $penerbit; 
+    Private $diskon = 0; 
+    Private $harga;
+    
     public function __construct($judul = "judul", $penulis = "penulis", 
-        $penerbit = "penerbit", $harga = 0 ) {
+    $penerbit = "penerbit", $harga = 0 ) {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
         $this->harga = $harga;
     }
+    
+    public function setDiskon( $diskon ) {
+        $this->diskon = $diskon;
+    }
 
+    public function getHarga() {
+        return $this->harga - ( $this->harga * $this->diskon / 100 );
+    }
+                             
     public function getLabel() {
         return "$this->penulis, $this->penerbit";
     }
@@ -45,6 +55,8 @@ class Game extends Produk {
         $penerbit, $harga );
         $this->waktumain = $waktumain;
     }
+    
+    
     public function getIngfoProduk() {
         $str = "Game : " . parent::getIngfoProduk() . " ~ {$this->waktumain} Jam.";
         return $str; 
@@ -60,9 +72,13 @@ class CetakIngfoProduk {
 
 
 $produk3 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100);
-$produk4 = new Game("Uncharted", "Neil Druckmann", "Sony Computer", 45000, 50);
+$produk4 = new Game("Uncharted", "Neil Druckmann", "Sony Computer", 450000, 50);
 
 
 echo $produk3->getIngfoProduk();
 echo "<br>";
 echo $produk4->getIngfoProduk();
+echo "<hr>";
+
+$produk4->setDiskon(60);
+echo $produk4->getHarga();
