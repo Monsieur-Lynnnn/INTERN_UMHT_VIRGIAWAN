@@ -24,7 +24,7 @@ class Produk {
 
 class Komik extends Produk {
     public function getIngfoProduk() {
-        $str = "Komik : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->jmlhalaman} Halaman.";
+        $str = "Komik : parent:: getIngfoProduk - {$this->jmlhalaman} Halaman.";
         return $str; 
     }
 }
