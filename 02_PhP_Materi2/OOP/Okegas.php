@@ -1,6 +1,6 @@
 <?php
 class Produk {
-    public $judul, $penulis, $penerbit; 
+    private $judul, $penulis, $penerbit; 
     Protected $diskon = 0; 
     Private $harga;
     
@@ -79,6 +79,8 @@ echo $produk3->getIngfoProduk();
 echo "<br>";
 echo $produk4->getIngfoProduk();
 echo "<hr>";
-
 $produk4->setDiskon(60);
 echo $produk4->getHarga();
+echo "<hr>";
+$produk5 = new Produk("Barangbaru");
+echo $produk5->judul;
