@@ -12,4 +12,4 @@ $cetakProduk->tambahProduk($produk4);
 echo $cetakProduk->cetak();
 
 echo "<hr>";
-new Coba();
+
